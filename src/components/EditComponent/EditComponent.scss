@@ -1,0 +1,44 @@
+.edit_form_wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  border-collapse: collapse;
+  min-width: 100%;
+  grid-template-columns:
+    minmax(18vw, 1fr)
+    minmax(18vw, 1fr)
+    minmax(18vw, 1fr)
+    minmax(18vw, 1fr)
+    minmax(10vw, 0.8fr);
+
+  > input {
+    border: 1px solid #1c5b6b;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+
+  > button {
+    cursor: pointer;
+    padding: 8px;
+    background: #1c5b6b;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+    margin-top: 3px;
+    outline: none;
+    margin-right: 4px;
+  }
+
+  > button:hover {
+    background: #15677c;
+  }
+
+  > button:disabled {
+    cursor: default;
+    background: #1c5b6b;
+  }
+}

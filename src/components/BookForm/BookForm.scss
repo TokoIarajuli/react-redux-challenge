@@ -1,0 +1,44 @@
+.post_form_container {
+  background: #1c4853;
+  width: 100vw;
+  height: 22vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .post_form_wrapper {
+    > h1 {
+      text-align: center;
+      color: rgb(212, 200, 200);
+    }
+
+    > input {
+      border: 1px solid #eeeeee;
+      padding: 8px;
+      outline: none;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+
+    > button {
+      cursor: pointer;
+      padding: 8px;
+      background: #1c5b6b;
+      border: none;
+      color: white;
+      font-size: 16px;
+      transition: background 0.3s ease;
+      border-radius: 5px;
+      margin-top: 7px;
+      outline: none;
+    }
+
+    > button:hover {
+      background: #15677c;
+    }
+
+    > button:disabled {
+      cursor: default;
+      background: #1c5b6b;
+    }
+  }
+}

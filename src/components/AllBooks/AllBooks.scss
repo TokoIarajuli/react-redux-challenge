@@ -1,0 +1,24 @@
+table {
+  > thead {
+    display: contents;
+
+    > th {
+      position: sticky;
+      top: 0;
+      background: #1c5b6b;
+      text-align: left;
+      font-weight: normal;
+      font-size: 1.1rem;
+      color: white;
+      padding: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    > th:last-child {
+      border: 0;
+    }
+  }
+}
