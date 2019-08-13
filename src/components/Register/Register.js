@@ -87,7 +87,7 @@ class Register extends React.Component {
         <div className="sign_up_form_box">
           <h2>Register</h2>
           <form onSubmit={this.handleSubmit} noValidate>
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
