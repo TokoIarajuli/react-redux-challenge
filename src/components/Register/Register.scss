@@ -1,0 +1,70 @@
+@mixin inputs {
+  border: 1px solid #eeeeee;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.sign_up_form {
+  background: #333744;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .sign_up_form_box {
+    box-shadow: 0px 0px 17px 1px #1d1f26;
+    background: #f7f7fa;
+    padding: 10px;
+    border-radius: 5px;
+    width: 22vw;
+
+    > h2 {
+      text-align: center;
+    }
+
+    > form {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+
+      > span {
+        color: red;
+        font-size: 12px;
+      }
+
+      > input {
+        @include inputs();
+        margin-bottom: 5px;
+      }
+
+      > button {
+        cursor: pointer;
+        padding: 12px;
+        background: #7c5cbf;
+        border: none;
+        color: white;
+        font-size: 16px;
+        transition: background 0.3s ease;
+        border-radius: 5px;
+        margin-top: 7px;
+      }
+
+      > button:hover {
+        background: #6b47b8;
+      }
+
+      > button:disabled {
+        cursor: default;
+        background: #7c5cbf94;
+      }
+
+      > textarea {
+        resize: none;
+        outline: none;
+        @include inputs();
+      }
+    }
+  }
+}
