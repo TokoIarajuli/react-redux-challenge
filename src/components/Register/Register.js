@@ -1,5 +1,6 @@
 import React from "react";
 import "./Register.scss";
+import { CountryDropdown } from "react-country-region-selector";
 
 //God bless google
 const validEmailRegex = RegExp(
@@ -19,13 +20,20 @@ class Register extends React.Component {
       email: null,
       lastname: null,
       password: null,
+      age: null,
+      country: "",
       errors: {
         name: "",
         lastname: "",
         email: "",
-        password: ""
+        password: "",
+        age: ""
       }
     };
+  }
+
+  selectCountry(val) {
+    this.setState({ country: val });
   }
 
   handleChange = e => {
@@ -54,6 +62,8 @@ class Register extends React.Component {
             ? "*Password must be at least 8 characters long!"
             : "";
         break;
+      case "age":
+        errors.age = value < 18 ? "*You Should be more than 18" : "";
       default:
         break;
     }
@@ -71,7 +81,7 @@ class Register extends React.Component {
   };
 
   render() {
-    const { errors } = this.state;
+    const { errors, country } = this.state;
     return (
       <div className="sign_up_form">
         <div className="sign_up_form_box">
@@ -109,6 +119,21 @@ class Register extends React.Component {
               noValidate
             />
             {errors.password.length > 0 && <span>{errors.password}</span>}
+            <label htmlFor="age">Age</label>
+            <input
+              type="number"
+              name="age"
+              onChange={this.handleChange}
+              noValidate
+            />
+            {errors.age.length > 0 && <span>{errors.age}</span>}
+            <label>Country</label>
+            <CountryDropdown
+              value={country}
+              onChange={val => this.selectCountry(val)}
+              required
+              classes="inputs"
+            />
             <label>Sex</label>
             <div>
               <input type="checkbox" id="male" />

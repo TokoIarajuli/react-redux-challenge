@@ -18,7 +18,7 @@
     background: #f7f7fa;
     padding: 10px;
     border-radius: 5px;
-    width: 22vw;
+    width: 28vw;
 
     > h2 {
       text-align: center;
@@ -37,6 +37,10 @@
       > input {
         @include inputs();
         margin-bottom: 5px;
+      }
+
+      .inputs {
+        @include inputs();
       }
 
       > button {
